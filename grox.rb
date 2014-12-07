@@ -65,7 +65,7 @@ def doOrientate(orientation)
     when 'inverted'
         `#{orientateCmd('inverted', '-1 0 1 0 -1 1 0 0 1')}`
     else
-        puts "Don't know #{orientation}"
+        raise "Don't know how to orientate to #{orientation}"
     end
 end
 

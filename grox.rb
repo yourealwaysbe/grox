@@ -11,7 +11,7 @@ $touchpad = 'ETPS/2 Elantech Touchpad'
 $keyboard = 'AT Translated Set 2 keyboard'
 
 # disable keypad and touchpad on all but normal orientation
-$controlKeys = true
+$controlKeys = false
 
 # runs cmd and greps output to find orientation
 $orientationCmd = 'xrandr'
@@ -45,10 +45,10 @@ def orientateCmd(orientation, transform)
     if $controlKeys
         setCmd = orientation == 'normal' ? 'xinput --enable ' 
                                          : 'xinput --disable '
-        controlKeys = "#{setCmd} '#{$touchpad}'; #{setCmd} '#{$keyboard}'"
+        controlKeys = "#{setCmd} '#{$touchpad}'; #{setCmd} '#{$keyboard}';"
     end
 
-    return controlKeys + ';' +
+    return controlKeys +
            rotateScreen + ';' +
            rotateTouchscreen + ';'
 end

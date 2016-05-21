@@ -11,7 +11,7 @@ $touchpad = 'ETPS/2 Elantech Touchpad'
 $keyboard = 'AT Translated Set 2 keyboard'
 
 # disable keypad and touchpad on all but normal orientation
-$controlKeys = false
+$controlKeys = true
 
 # runs cmd and greps output to find orientation
 $orientationCmd = 'xrandr'

@@ -11,7 +11,7 @@ screens).
 DEPENDS
 -------
 
-xrandr
+Xrandr
 
 
 SETUP
